@@ -6,6 +6,8 @@
     </head>
     <body>
 	
+	<!-- parametres get via url-->
+	
 	<?php
 	if (isset($_GET['prenom']) AND isset($_GET['nom']) AND isset($_GET['repeter']))
 	{
@@ -21,10 +23,14 @@
 			}
 		}
 	}
-	else
-	{	
-   echo 'Bonjour';
-	}
+	?>
+	
+	<!--parametres recues par formulaire -->
+	<?php
+	if (isset($_POST['prenom']) AND isset($_POST['nom']) )
+	
+		echo 'Bonjour ' . $_POST['prenom'] . ' ' . $_POST['nom'] . ' !<br />';
+	
 	?>
 	
         <h2>Affichage de texte avec PHP</h2>
