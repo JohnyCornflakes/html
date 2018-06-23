@@ -22,8 +22,8 @@ catch (Exception $e)
 	<form method="post" action="chat_post.php">
  
 	<p>
-		<input type="text" name="nom"" /> <br/>
-		<br/><input type="text" name="message" /><br/>
+		Ton nom : <input type="text" name="nom"" /> <br/>
+		<br/> Ton message : <input type="text" name="message" /><br/>
 		<br/><input type="submit" value="Valider" /><br/>
 	</p>
  
@@ -37,7 +37,10 @@ $basemessages = $bdd->query('SELECT pseudo, message FROM minichat ORDER BY id DE
 	
 	While ($message = $basemessages->fetch()) 
 	{
-		echo $message['pseudo'] . " : " . $message['message'] . "<br/>";
+		if ($message['pseudo'] != NULL OR $message['message'] != NULL)
+		{
+			echo $message['pseudo'] . " a écrit : " . $message['message'] . "<br/>";
+		}
 	}
 	
 	$basemessages->closeCursor();

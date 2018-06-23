@@ -20,7 +20,9 @@ rentrer le code secret
  
 </form>
 
-<a href="affichebase.php">Vers la base !</a>
+<a href="affichebase.php">Vers la base !</a> <br/>
+
+<a href="chat.php">Vers le chat....Miaouw !</a>
 
 
-<?php phpinfo(); ?>
+<!-- <?php phpinfo(); ?> -->
