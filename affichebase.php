@@ -10,7 +10,18 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 
-/* requete 1 
+// requete noms
+
+$nom_jv=$bdd->query('SELECT nom FROM jeux_video');
+
+While ($jeu = $nom_jv->fetch())
+{
+		echo $jeu['nom'] . "<br/>";
+}
+$nom_jv->closeCursor();
+
+
+ // requete totale 
 
 $table_jv=$bdd->query('SELECT * FROM jeux_video');
 
@@ -26,15 +37,9 @@ While ($entree = $table_jv->fetch())
 <?php
 }
 
-$table_jv->closeCursor(); */
+$table_jv->closeCursor(); 
 
-// requete 2
+// SELECT nom, possesseur, console, prix FROM jeux_video WHERE console='Xbox' OR console='PS2' ORDER BY prix DESC LIMIT 0,10
 
-$nom_jv=$bdd->query('SELECT nom FROM jeux_video');
-
-While ($jeu = $nom_jv->fetch())
-{
-		echo $jeu['nom'] . "<br/>";
-}
-$nom_jv->closeCursor();
 ?>
+
