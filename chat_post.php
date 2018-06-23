@@ -13,8 +13,8 @@ if (isset ($_POST['nom']) AND $_POST['nom'] != NULL AND isset ($_POST['message']
 {
 	echo "boucle";
 	
-	$insert = $bdd->prepare('INSERT INTO minichat(pseudo, message) VALUES (?, ?)');  
-	$insert->execute(array($_POST['nom'], $_POST['message']));
+	$insert = $bdd->prepare('INSERT INTO minichat(pseudo, message, date_message) VALUES (?, ?, ?)');  
+	$insert->execute(array($_POST['nom'], $_POST['message'], date('y/m/d h:i:s')));
 	
 }
 

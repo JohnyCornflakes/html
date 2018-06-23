@@ -33,13 +33,13 @@ catch (Exception $e)
 	
 <?php
 
-$basemessages = $bdd->query('SELECT pseudo, message FROM minichat ORDER BY id DESC');
+$basemessages = $bdd->query('SELECT pseudo, message, DAY(date_message) AS jour, MONTH(date_message) AS mois, HOUR(date_message) AS heure, MINUTE(date_message) AS minute FROM minichat ORDER BY id DESC');
 	
 	While ($message = $basemessages->fetch()) 
 	{
 		if ($message['pseudo'] != NULL OR $message['message'] != NULL)
 		{
-			echo $message['pseudo'] . " a écrit : " . $message['message'] . "<br/>";
+			echo $message['pseudo'] . " a écrit : " . $message['message'] . " le " . $message['jour'] . " / " . $message['mois'] . " a " . $message['heure'] . " : " . $message['minute'] . "<br/>";
 		}
 	}
 	
