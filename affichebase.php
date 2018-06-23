@@ -1,5 +1,5 @@
 
-<a href="requete_prepare.php?possesseur=michel&amp;prix_max=25">Tri par prix et possesseur</a>
+<a href="requete_prepare.php?possesseur=michel&amp;prix_max=25">Tri par prix et possesseur</a> <br/>
 
 
 <?php

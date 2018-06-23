@@ -20,4 +20,7 @@ rentrer le code secret
  
 </form>
 
+<a href="affichebase.php">Vers la base !</a>
+
+
 <?php phpinfo(); ?>
