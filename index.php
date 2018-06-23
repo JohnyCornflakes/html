@@ -20,4 +20,4 @@ rentrer le code secret
  
 </form>
 
-<?php phpinfo(); ?>" > /var/www/html/index.php
+<?php phpinfo(); ?>
