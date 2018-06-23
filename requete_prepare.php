@@ -10,7 +10,16 @@ catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
 }
+?>
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Requete variable</title>
+        <meta charset="utf-8" />
+    </head>
+	
+<?php
 // requete a variable 1 -- GET
 if (isset($_GET['possesseur']) AND isset($_GET['prix_max']) AND $_GET['prix_max'] > 0 AND $_GET['possesseur'] != NULL )
 {

@@ -14,6 +14,17 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les jeux videos</title>
+        <meta charset="utf-8" />
+    </head>
+	
+<?php
+
 // requete noms
 
 $nom_jv=$bdd->query('SELECT nom FROM jeux_video');
